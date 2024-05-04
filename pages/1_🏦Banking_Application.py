@@ -77,7 +77,7 @@ def check_password():
 
     # Show input for password.
     #image = Image.open('data_app_logo.png')
-    image = Image.open('Bank_Logo.png')
+    image = Image.open('./repositary/Bank_Logo.png')
     col1,col2,col3=st.columns([1,2,1])
 
     with col2:
