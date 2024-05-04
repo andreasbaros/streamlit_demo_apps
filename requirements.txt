@@ -4,3 +4,4 @@ xlsxwriter
 plotly.express
 matplotlib
 seaborn
+markdown
