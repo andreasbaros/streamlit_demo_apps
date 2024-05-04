@@ -25,7 +25,7 @@ import scipy
 #import saspy
 import seaborn as sns
 
-from IPython.display import Markdown
+#from IPython.display import Markdown
 
 from openpyxl.reader.excel import load_workbook
 from openpyxl.workbook import Workbook
