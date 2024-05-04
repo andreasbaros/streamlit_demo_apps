@@ -2,3 +2,4 @@ streamlit
 openpyxl
 xlsxwriter
 plotly.express
+matplotlib
