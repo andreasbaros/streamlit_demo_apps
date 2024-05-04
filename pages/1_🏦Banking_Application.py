@@ -124,7 +124,7 @@ st.set_page_config(page_title="Banking Data Analysis & Visualization App", page_
 #@st.cache_data
 def load_data_NPL(xls_file):
     # Loading data set
-    folder_path = 'C:/Users/andre/Desktop/Streamlit Production/'
+    folder_path = './repository/'
     xlsx = pd.ExcelFile(folder_path + f'banking_data_{xls_file}.xlsx')
     
     #xlsx = pd.ExcelFile(folder_path + 'demo_dataset_final_names.xlsx')
