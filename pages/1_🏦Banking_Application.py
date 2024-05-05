@@ -1797,7 +1797,7 @@ if main_page:
             col3,col1,col2=st.columns([2,0.5,2])
             with col3:
                     #bar_pie_bucket2 = st.radio("🔲 Select type of graph:", ["Bar charts", "Pie charts"], horizontal=True, key='bucket_bar_or_pie')
-                    bin_show = st.selectbox("Select count from dropdown list to show in graph:", 
+                    bin_show = st.selectbox("Select amount from dropdown list to show in graph:", 
                                             options=["GrossLoanAmount", "Number of Facilities", "Average Exposure"])    
                     
                
@@ -1814,7 +1814,7 @@ if main_page:
                     else:
                            bin_df_bar3.update_traces(texttemplate="<br>%{y:.5s}")
                     
-                    bin_df_bar3.update_layout(title_x=0.35, legend=dict(orientation="h"),font=dict(size= 12))
+                    bin_df_bar3.update_layout(title_x=0.35, legend=dict(orientation="h",font=dict(size= 12)))
                     #
     
                     bin_df_pie=px.pie(bin_df.iloc[:-1, :], values=bin_show, names='Gross Loan Amount Bucket', hole=.35, title=f"{bin_show} per Bucket")
@@ -1848,7 +1848,7 @@ if main_page:
                 
                 
                     bin_df_bar_dpd=bin_df_bar_dpd.update_layout(title_x=0.35,legend=dict(
-                                             orientation="h"),font=dict(size= 12))
+                                             orientation="h",font=dict(size= 12)))
                     #,font=dict(size= 15)
                     st.plotly_chart(bin_df_bar_dpd,use_column_width='auto')
             
