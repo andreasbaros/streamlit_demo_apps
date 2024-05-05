@@ -57,7 +57,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-image = Image.open('./repository/data_app_logo.png')
+image = Image.open('./repositary/data_app_logo.png')
 col1, col2, col3 = st.columns([1, 2, 1])
 
 with col2:
