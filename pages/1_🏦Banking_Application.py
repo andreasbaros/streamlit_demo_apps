@@ -838,7 +838,7 @@ df_long_portfolio_cd_1 = pd.melt(df_exp_portfolio_cd_v2, id_vars=['ProductCatego
 fig_long_portfolio_cd_1 = px.bar(df_long_portfolio_cd_1, x='Value', y='ProductCategory', color='ProductCategory', orientation='h', facet_col='Column', facet_col_wrap=2, text='Value')
 fig_long_portfolio_cd_1.update_traces(texttemplate='€%{x:.5s}',hovertemplate='Type: %{y} <br> Value: €%{x:,.0f} <extra> </extra>')
                                   
-fig_long_portfolio_cd_1.update_layout(title_text='Gross Loan Amount, Provision on Bce, Net Book Value & Real Estate Collateral Legal Claim per Portfolio Type',
+fig_long_portfolio_cd_1.update_layout(title_text='Gross Loan Amount, Provisions, Net Book Value & Loan Collateral Value per Portfolio Type',
                                       height=550,width=800,legend=dict(orientation='h'))
 fig_long_portfolio_cd_1.for_each_annotation(lambda ann: ann.update(text=ann.text.split("=")[-1]))
 
@@ -1683,7 +1683,7 @@ if main_page:
             #     st.subheader(":blue[Top Group CIFs Analysis]")
             
             #col1, col2,col5, col3 = st.columns([0.5, 5.5, 0.5,5.5])
-            col2,col3=st.columns(2)
+            col2,col1,col3=st.columns([2,0.5,2])
             with col2:
                 st.write("")
                 st.write("")
@@ -2056,7 +2056,7 @@ if main_page:
                     
                     fig_long1.update_traces(texttemplate='€%{x:.5s}',hovertemplate='Type: %{y} <br> Value: €%{x:,.0f} <extra> </extra>')
                     
-                    fig_long1.update_layout(title_text='Gross Loan Amount, Provision on Bce, Net Book Value & Real Estate Collateral Legal Claim per Product Type',
+                    fig_long1.update_layout(title_text='Gross Loan Amount, Provisions, Net Book Value & Loan Collateral Value per Product Type',
                                                           height=550,width=800,legend=dict(orientation='h'))
                     fig_long1.for_each_annotation(lambda ann: ann.update(text=ann.text.split("=")[-1]))
                     
