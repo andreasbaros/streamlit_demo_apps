@@ -1823,7 +1823,7 @@ if main_page:
                         
                     #bar_pie_bucket2="Bar charts"
                     
-                    st.plotly_chart(bin_df_bar3, use_column_width='auto')
+                    st.plotly_chart(bin_df_bar3, use_container_width=True)
                     bin_df_download=bin_df.copy()
                     bin_df_download['GrossLoanAmount Percentage (%)']=bin_df_download['GrossLoanAmount Percentage (%)']/100
                     
@@ -1850,7 +1850,8 @@ if main_page:
                     bin_df_bar_dpd=bin_df_bar_dpd.update_layout(title_x=0.35,legend=dict(
                                              orientation="h",font=dict(size= 12)))
                     #,font=dict(size= 15)
-                    st.plotly_chart(bin_df_bar_dpd,use_column_width='auto')
+                    st.plotly_chart(bin_df_bar_dpd,use_container_width=True)
+                     #use_column_width='auto'
             
                     
             #colbl2,col2a,colbl,col2b,colbl3=st.columns([0.5,10,1.4,10,0.5])
