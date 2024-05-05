@@ -1793,8 +1793,8 @@ if main_page:
                     
             st.write("")
             st.write("")
-            col1, col3,col5, col2 = st.columns([0.5, 5.5, 0.5,5.5])
-            #col1
+            @col1, col3,col5, col2 = st.columns([0.5, 5.5, 0.5,5.5])
+            col3,col1,col2=st,columns([2,0.5,2])
             with col3:
                     #bar_pie_bucket2 = st.radio("🔲 Select type of graph:", ["Bar charts", "Pie charts"], horizontal=True, key='bucket_bar_or_pie')
                     bin_show = st.selectbox("Select count from dropdown list to show in graph:", 
@@ -1814,7 +1814,8 @@ if main_page:
                     else:
                            bin_df_bar3.update_traces(texttemplate="<br>%{y:.5s}")
                     
-                    bin_df_bar3.update_layout(title_x=0.35, legend=dict(orientation="h",font=dict(size= 15)))
+                    bin_df_bar3.update_layout(title_x=0.35, legend=dict(orientation="h"))
+                    #,font=dict(size= 15)
     
                     bin_df_pie=px.pie(bin_df.iloc[:-1, :], values=bin_show, names='Gross Loan Amount Bucket', hole=.35, title=f"{bin_show} per Bucket")
                     bin_df_pie.update_traces(textposition='inside', textinfo='value+percent+label', texttemplate= '%{label}''<br>%{value:,.0f}<br>%{percent:.2%}')
@@ -1847,13 +1848,13 @@ if main_page:
                 
                 
                     bin_df_bar_dpd=bin_df_bar_dpd.update_layout(title_x=0.35,legend=dict(
-                                             orientation="h",font=dict(size= 15)))
-                    
+                                             orientation="h"))
+                    #,font=dict(size= 15)
                     st.plotly_chart(bin_df_bar_dpd,use_column_width='auto')
             
                     
-            colbl2,col2a,colbl,col2b,colbl3=st.columns([0.5,10,1.4,10,0.5])
-            with col2a:
+            #colbl2,col2a,colbl,col2b,colbl3=st.columns([0.5,10,1.4,10,0.5])
+            with col3:
                 with st.expander("**View data in tabular format:**"):
                     st.write("")
                     
@@ -1880,7 +1881,7 @@ if main_page:
                             st.download_button('💾 Download table to excel', data=buffer, file_name=file_export_name, mime='application/vnd.ms-excel', key="table1")
                 
             
-            with col2b:
+            with col2:
                     with st.expander("**View data in tabular format:**"):
                         st.write("")
                     
