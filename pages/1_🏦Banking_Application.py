@@ -1767,7 +1767,7 @@ if main_page:
                     st.write("")
                     st.write("")
                     st.write("")
-                    st.info(f"The :green[Top {number_top} Group Clients] account for :red[{'{:,.2f}'.format(top_10['GrossLoanAmount (% of total)'].head(number_top).sum())} %] of Total Gross Loan Amount, totalling around :red[€{'{:,.2f}M'.format(top_10['GrossLoanAmount'].head(number_top).sum()/1000000)}] out of :red[€{'{:,.2f}M'.format(df['GrossLoanAmount'].sum()/1000000)}]")
+                    st.info(f"The :green[top {number_top} Group Clients] account for :red[{'{:,.2f}'.format(top_10['GrossLoanAmount (% of total)'].head(number_top).sum())} %] of Total Gross Loan Amount, totalling around :red[€{'{:,.2f}M'.format(top_10['GrossLoanAmount'].head(number_top).sum()/1000000)}] out of :red[€{'{:,.2f}M'.format(df['GrossLoanAmount'].sum()/1000000)}]")
                 
                     #st.dataframe(top_10_formatted,hide_index=False)
                     #top_10_download.index+=1
@@ -1794,7 +1794,7 @@ if main_page:
             st.write("")
             st.write("")
             #col1, col3,col5, col2 = st.columns([0.5, 5.5, 0.5,5.5])
-            col3,col1,col2=st.columns([2,0.5,2])
+            col3,col1,col2,col4=st.columns([2,0.5,2,0.5])
             with col3:
                     #bar_pie_bucket2 = st.radio("🔲 Select type of graph:", ["Bar charts", "Pie charts"], horizontal=True, key='bucket_bar_or_pie')
                     bin_show = st.selectbox("Select amount from dropdown list to show in graph:", 
@@ -1812,7 +1812,7 @@ if main_page:
                     if bin_show=="Number of Facilities":
                            bin_df_bar3.update_traces(texttemplate="<br>%{y:,.0f}")
                     else:
-                           bin_df_bar3.update_traces(texttemplate="<br>%{y:.5s}")
+                           bin_df_bar3.update_traces(texttemplate="<br>€%{y:.5s}")
                     
                     bin_df_bar3.update_layout(title_x=0.35, legend=dict(orientation="h",font=dict(size= 12)))
                     #
