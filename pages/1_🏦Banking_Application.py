@@ -1814,8 +1814,8 @@ if main_page:
                     else:
                            bin_df_bar3.update_traces(texttemplate="<br>%{y:.5s}")
                     
-                    bin_df_bar3.update_layout(title_x=0.35, legend=dict(orientation="h"))
-                    #,font=dict(size= 15)
+                    bin_df_bar3.update_layout(title_x=0.35, legend=dict(orientation="h"),font=dict(size= 12))
+                    #
     
                     bin_df_pie=px.pie(bin_df.iloc[:-1, :], values=bin_show, names='Gross Loan Amount Bucket', hole=.35, title=f"{bin_show} per Bucket")
                     bin_df_pie.update_traces(textposition='inside', textinfo='value+percent+label', texttemplate= '%{label}''<br>%{value:,.0f}<br>%{percent:.2%}')
@@ -1848,7 +1848,7 @@ if main_page:
                 
                 
                     bin_df_bar_dpd=bin_df_bar_dpd.update_layout(title_x=0.35,legend=dict(
-                                             orientation="h"))
+                                             orientation="h"),font=dict(size= 12))
                     #,font=dict(size= 15)
                     st.plotly_chart(bin_df_bar_dpd,use_column_width='auto')
             
