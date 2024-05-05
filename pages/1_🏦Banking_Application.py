@@ -611,7 +611,7 @@ Per_NPL_flag_formatted = Per_NPL_flag.copy()
 
 
 # Summarize Facilities dataframe per Product type add 'Number of Facilities'column and 'Total'row
-Per_product = df.groupby('ProductType', dropna=False)['GrossLoanAmount', 'GrossProvisionsAmount', 'Contract_NBV', 'LoanCollateralValue'].sum()
+Per_product = df.groupby('ProductType', dropna=False)[['GrossLoanAmount', 'GrossProvisionsAmount', 'Contract_NBV', 'LoanCollateralValue']].sum()
 Per_product['Number of Facilities'] = df.groupby('ProductType')['IndivIDC'].nunique()
 Per_product['Number of CIFs'] = df.groupby('ProductType')['ClientIDC'].nunique()
 Per_product['Number of Group CIFs'] = df.groupby('ProductType')['GroupIDC'].nunique()
@@ -631,7 +631,7 @@ Per_product_formatted = Per_product.copy()
 # Per_product_formatted['Number of Group CIFs'] = Per_product_formatted['Number of Group CIFs'].apply(lambda x: '{:,}'.format(x['Number of Group CIFs']),axis=1)
 
 
-Per_risk = df.groupby('RiskClass', dropna=False)['GrossLoanAmount', 'GrossProvisionsAmount', 'Contract_NBV', 'LoanCollateralValue'].sum()
+Per_risk = df.groupby('RiskClass', dropna=False)[['GrossLoanAmount', 'GrossProvisionsAmount', 'Contract_NBV', 'LoanCollateralValue']].sum()
 Per_risk['Number of Facilities'] = df.groupby('RiskClass')['IndivIDC'].nunique()
 Per_risk['Number of CIFs'] = df.groupby('RiskClass')['ClientIDC'].nunique()
 Per_risk['Number of Group CIFs'] = df.groupby('RiskClass')['GroupIDC'].nunique()
@@ -649,7 +649,7 @@ Per_risk=Per_risk.reindex(["Low Risk","Moderate Risk","High Risk","Very High Ris
 Per_risk_formatted = Per_risk.copy()
 
 
-Per_NPL_class = df.groupby('NonPerformingLoan(NPL)', dropna=False)['GrossLoanAmount', 'GrossProvisionsAmount', 'Contract_NBV', 'LoanCollateralValue'].sum()
+Per_NPL_class = df.groupby('NonPerformingLoan(NPL)', dropna=False)[['GrossLoanAmount', 'GrossProvisionsAmount', 'Contract_NBV', 'LoanCollateralValue']].sum()
 Per_NPL_class['Number of Facilities'] = df.groupby('NonPerformingLoan(NPL)')['IndivIDC'].nunique()
 Per_NPL_class['Number of CIFs'] = df.groupby('NonPerformingLoan(NPL)')['ClientIDC'].nunique()
 Per_NPL_class['Number of Group CIFs'] = df.groupby('NonPerformingLoan(NPL)')['GroupIDC'].nunique()
@@ -774,7 +774,7 @@ fig4 = px.pie(Per_product.iloc[:-1,:], values='GrossLoanAmount', names=Per_produ
 
 
 # Summarize Facilities dataframe per Portfolio Type (Retail, SME, Corporate) add 'Number of Facilities'column and 'Total'row
-Per_product_ultra3 = df.groupby('ProductCategory')['GrossLoanAmount', 'GrossProvisionsAmount', 'Contract_NBV', 'LoanCollateralValue'].sum()
+Per_product_ultra3 = df.groupby('ProductCategory')[['GrossLoanAmount', 'GrossProvisionsAmount', 'Contract_NBV', 'LoanCollateralValue']].sum()
 
 Per_product_ultra3['Number of Facilities'] = df.groupby('ProductCategory')[['IndivIDC']].nunique()
 Per_product_ultra3['Number of CIFs'] = df.groupby('ProductCategory')[['ClientIDC']].nunique()
