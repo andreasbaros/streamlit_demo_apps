@@ -1793,7 +1793,7 @@ if main_page:
                     
             st.write("")
             st.write("")
-            @col1, col3,col5, col2 = st.columns([0.5, 5.5, 0.5,5.5])
+            #col1, col3,col5, col2 = st.columns([0.5, 5.5, 0.5,5.5])
             col3,col1,col2=st,columns([2,0.5,2])
             with col3:
                     #bar_pie_bucket2 = st.radio("🔲 Select type of graph:", ["Bar charts", "Pie charts"], horizontal=True, key='bucket_bar_or_pie')
