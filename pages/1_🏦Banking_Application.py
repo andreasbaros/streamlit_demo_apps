@@ -944,7 +944,7 @@ fig_table_bucket.update_layout(height=550, width=600, title_text="Contract Gross
          
 
 
-image = Image.open('Bank_Logo.png')
+image = Image.open('./repositary/Bank_Logo.png')
 #st.markdown(image)
 col1,col2,col3=st.columns([1,2,1])
 
