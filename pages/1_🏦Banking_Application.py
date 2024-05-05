@@ -2026,7 +2026,7 @@ if main_page:
                 
             with col3:
                     
-                    st.plotly_chart(fig_long_portfolio_cd_1)
+                    st.plotly_chart(fig_long_portfolio_cd_1,use_column_width='auto')
                     
                     
                     
@@ -2062,7 +2062,7 @@ if main_page:
                                                           height=550,width=800,legend=dict(orientation='h'))
                     fig_long1.for_each_annotation(lambda ann: ann.update(text=ann.text.split("=")[-1]))
                     
-                    st.plotly_chart(fig_long1)
+                    st.plotly_chart(fig_long1,use_column_width='auto')
                     #st.write("")
                     
             
