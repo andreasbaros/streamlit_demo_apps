@@ -2022,7 +2022,7 @@ if main_page:
             st.divider()
             st.info("Double-click on legend to isolate specific option in the graph.")
                 
-            col3,col4=st.columns(2)
+            col3,colspace,col4=st.columns([2,0.5,2])
                 
             with col3:
                     
