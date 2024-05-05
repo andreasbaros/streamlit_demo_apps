@@ -839,7 +839,7 @@ fig_long_portfolio_cd_1 = px.bar(df_long_portfolio_cd_1, x='Value', y='ProductCa
 fig_long_portfolio_cd_1.update_traces(texttemplate='€%{x:.5s}',hovertemplate='Type: %{y} <br> Value: €%{x:,.0f} <extra> </extra>')
                                   
 fig_long_portfolio_cd_1.update_layout(title_text='Gross Loan Amount, Provisions, Net Book Value & Loan Collateral Value per Portfolio Type',
-                                      height=550,width=800,legend=dict(orientation='h'))
+                                     legend=dict(orientation='h'))
 fig_long_portfolio_cd_1.for_each_annotation(lambda ann: ann.update(text=ann.text.split("=")[-1]))
 
 df_woz=df[df['GrossLoanAmount'] != 0]
@@ -2059,7 +2059,7 @@ if main_page:
                     fig_long1.update_traces(texttemplate='€%{x:.5s}',hovertemplate='Type: %{y} <br> Value: €%{x:,.0f} <extra> </extra>')
                     
                     fig_long1.update_layout(title_text='Gross Loan Amount, Provisions, Net Book Value & Loan Collateral Value per Product Type',
-                                                          height=550,width=800,legend=dict(orientation='h'))
+                                                          legend=dict(orientation='h'))
                     fig_long1.for_each_annotation(lambda ann: ann.update(text=ann.text.split("=")[-1]))
                     
                     st.plotly_chart(fig_long1,use_column_width='auto')
