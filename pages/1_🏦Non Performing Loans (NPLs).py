@@ -1852,7 +1852,7 @@ if main_page:
                 
                 
                     bin_df_bar_dpd=bin_df_bar_dpd.update_layout(title_x=0.35,legend=dict(
-                                             orientation="h",font=dict(size= 12)))
+                                             orientation="h",font=dict(size= 10)))
                     #,font=dict(size= 15)
                     st.plotly_chart(bin_df_bar_dpd,use_container_width=True)
                      #use_column_width='auto'
