@@ -2081,7 +2081,7 @@ if main_page:
             # with col2:
             #         st.subheader(":blue[Distribution Graphs - Level 2 Analysis]")
                     
-            dist1, dist2=st.columns(2)
+            dist1,distsp, dist2=st.columns([2,0.25,2])
                 
             with dist1:
                         select_hist=st.radio("Select variable to view in the graphs:", 
@@ -2225,7 +2225,7 @@ if main_page:
                     #st.plotly_chart(fig_3d)
                     
             st.divider()
-            col6,col7=st.columns(2)
+            col6,colsp,col7=st.columns([2,0.25,2])
                 
             select_hist_radio = st.radio('Select amount to view in the histograms:', 
                              options=['GrossLoanAmount', 'GrossProvisionsAmount', 
