@@ -1934,13 +1934,13 @@ if main_page:
             #         st.write("")
             col3b,colbl,col4b=st.columns([2,0.25,2])
             with col3b:           
-                st.plotly_chart(NPL_pie)
+                st.plotly_chart(NPL_pie,use_container_width=True)
                 
                 with st.expander("**View data in tabular format:**"):
                         st.dataframe(Per_NPL_class_formatted)
                         
             with col4b:    
-                    st.plotly_chart(riskclass_pie)
+                    st.plotly_chart(riskclass_pie,use_container_width=True)
                     with st.expander("**View data in tabular format:**"):
                         st.dataframe(Per_risk_formatted)
             
@@ -2031,7 +2031,7 @@ if main_page:
                 
             with col3:
                     
-                    st.plotly_chart(fig_long_portfolio_cd_1)
+                    st.plotly_chart(fig_long_portfolio_cd_1,use_container_width=True)
                     
                     
                     
@@ -2067,7 +2067,7 @@ if main_page:
                                                           legend=dict(orientation='h'))
                     fig_long1.for_each_annotation(lambda ann: ann.update(text=ann.text.split("=")[-1]))
                     
-                    st.plotly_chart(fig_long1)
+                    st.plotly_chart(fig_long1,use_container_width=True)
                     #st.write("")
                     
             
@@ -2187,7 +2187,7 @@ if main_page:
                             
                             
                             
-                        st.plotly_chart(fig5_portfolio2)                                        
+                        st.plotly_chart(fig5_portfolio2,use_container_width=True)                                        
                                                             
                                                             
                                             
@@ -2198,7 +2198,7 @@ if main_page:
                     st.write('\n')
                     st.write('\n')
                     
-                    st.plotly_chart(fig5)
+                    st.plotly_chart(fig5,use_container_width=True)
 
                     fig_DPD_hist=px.scatter(df, x='GrossLoanAmount', y=df['PaymentDelayDays'], log_x=True, color='ProductType',
                                             hover_name='ClientIDC', title="Payment Delay Days vs  GrossLoanAmount dispersion - Scatter Plot")
@@ -2255,10 +2255,10 @@ if main_page:
                     if df_selected_portfolio_type[select_hist_radio].sum()==0:
                         st.warning("No graph to show for selected amount.")
                     else:
-                        st.plotly_chart(fig_hist_port2)
+                        st.plotly_chart(fig_hist_port2,use_container_width=True)
                     
             with col7:
-                        st.plotly_chart(fig_DPD_hist)
+                        st.plotly_chart(fig_DPD_hist,use_container_width=True)
                         select_product_type=st.selectbox("Select product type:", options=df['ProductType'].unique())
                         df_selected_product_type=df[df['ProductType']==select_product_type]
                         
@@ -2281,7 +2281,7 @@ if main_page:
                         if df_selected_product_type[select_hist_radio].sum()==0:
                             st.error(f" ⚠️ {select_product_type} have zero {select_hist_radio} values. No graph to show. Please select different product type or amount.")
                         else:
-                            st.plotly_chart(fig_hist2)
+                            st.plotly_chart(fig_hist2,use_container_width=True)
                     
                     # As an html button (needs styling added)
             st.markdown("<a href='#linkto_top'><center> Link to top</a>", unsafe_allow_html=True)
