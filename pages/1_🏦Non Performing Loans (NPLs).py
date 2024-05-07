@@ -1932,7 +1932,7 @@ if main_page:
             #         st.write("")
             #         st.write("")
             #         st.write("")
-            col3b,col4b=st.columns(2)
+            col3b,colbl,col4b=st.columns([2,0.25,2])
             with col3b:           
                 st.plotly_chart(NPL_pie)
                 
@@ -1945,7 +1945,7 @@ if main_page:
                         st.dataframe(Per_risk_formatted)
             
             st.divider()            
-            col1,col2=st.columns(2)  
+            col1,colbl,col2=st.columns([2,0.25,2]) 
                 
             with col1:
                     select2 = st.radio("Select amount to view in the bar chart:",
@@ -1957,7 +1957,7 @@ if main_page:
                                options=['GrossLoanAmount', 'GrossProvisionsAmount', 'Contract_NBV', 'LoanCollateralValue'],
                                horizontal=True)
                 
-            col1, col2=st.columns(2)
+            col1,colbl,col2=st.columns([2,0.25,2]) 
             with col1:
                     fig3_x_cons_portfolio = px.bar(Per_product_ultra3.reset_index().iloc[:,:], y='ProductCategory',
                                                    x=select2,title=f"""{select2} Amount per Portfolio Type""",color='ProductCategory')
@@ -2001,7 +2001,7 @@ if main_page:
                     fig.update_traces(texttemplate='€%{x:.5s}', 
                                       hovertemplate='Type: %{y} <br>Value: €%{x:,.0f} <br>Number of Facilities: %{customdata:,.0f}<extra></extra>')
                     
-                    st.plotly_chart(fig)
+                    st.plotly_chart(fig, use_container_width=True)
                     
                     with st.expander("**View data in tabular form**"):
                         st.write("\n")
