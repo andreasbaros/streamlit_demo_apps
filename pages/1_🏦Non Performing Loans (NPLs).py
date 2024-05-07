@@ -1858,7 +1858,8 @@ if main_page:
             
                     
             #colbl2,col2a,colbl,col2b,colbl3=st.columns([0.5,10,1.4,10,0.5])
-            with col3:
+            col3t,col1t,col2t=st.columns([2,0.25,2])
+            with col3t:
                 with st.expander("**View data in tabular format:**"):
                     st.write("")
                     
@@ -1885,7 +1886,7 @@ if main_page:
                             st.download_button('💾 Download table to excel', data=buffer, file_name=file_export_name, mime='application/vnd.ms-excel', key="table1")
                 
             
-            with col2:
+            with col2t:
                     with st.expander("**View data in tabular format:**"):
                         st.write("")
                     
