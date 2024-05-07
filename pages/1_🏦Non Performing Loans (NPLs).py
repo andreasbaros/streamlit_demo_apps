@@ -94,7 +94,7 @@ def check_password():
     st.write("")
     col1,col2,col3=st.columns([1,20,1])
     with col2:
-        st.markdown("""# <center><strong>:bank: :grey[**Non-Performing Loans Analysis**] :bank:</strong></center>""", unsafe_allow_html=True)
+        st.markdown("""## <center><strong>:bank: :grey[**Non-Performing Loans Analysis**] :bank:</strong></center>""", unsafe_allow_html=True)
         #st.markdown("""## <center><strong>:blue[Non-Performing Loans Analysis]</strong></center>""", unsafe_allow_html=True)
 
         
@@ -963,8 +963,8 @@ with col2:
 st.write('\n') 
 
 
-st.markdown("""# <center><strong>:bank: :grey[**Banking Data Insights App**] :bank:</strong></center>""", unsafe_allow_html=True)
-st.markdown("""## <center><strong>:blue[Non-Performing Loans Analysis]</strong></center>""", unsafe_allow_html=True)
+st.markdown("""## <center><strong>:bank: :grey[**Non-Performing Loans Analysis**] :bank:</strong></center>""", unsafe_allow_html=True)
+#st.markdown("""## <center><strong>:blue[Non-Performing Loans Analysis]</strong></center>""", unsafe_allow_html=True)
 
 # st.markdown('''
 #     :red[Streamlit] :orange[can] :green[write] :blue[text] :violet[in]
