@@ -2218,7 +2218,7 @@ if main_page:
                     fig_3d = px.scatter_3d(df_3d, x='PaymentDelayDays', y=df_3d['GrossLoanAmount'], z=df_3d['LoanCollateralValue'],
                                            color='ProductType', hover_name='ClientIDC',
                                            log_x=True, log_y=True, log_z=True, title="3D Scatter Plot")
-                    fig_3d.update_layout(title_x=0, height=800, width=800)
+                    fig_3d.update_layout(title_x=0, height=800, width=650)
                     fig_3d.update_layout(dragmode='select',
                                          legend=dict(title='ProductType', orientation='h'))
                     
@@ -2233,7 +2233,7 @@ if main_page:
                              horizontal=True)
 
             with col6:
-                    st.plotly_chart(fig_DPD_scatter_portfolio)
+                    st.plotly_chart(fig_DPD_scatter_portfolio,use_container_width=True)
                     select_portfolio_type=st.selectbox("Select portfolio type:",options=df['ProductCategory'].unique())
                     df_selected_portfolio_type=df[df['ProductCategory']==select_portfolio_type]
                     
