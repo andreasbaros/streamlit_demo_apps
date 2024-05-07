@@ -100,6 +100,7 @@ def check_password():
         
         st.write("")
         st.write("")
+        st.markdown("The password to access the app is :green[<mark>multiappdemo123</mark>], unsafe_allow_html=True)
         st.text_input(
             "🔐 Please enter password to access data apps:", type="password",
             on_change=password_entered, key="password"
