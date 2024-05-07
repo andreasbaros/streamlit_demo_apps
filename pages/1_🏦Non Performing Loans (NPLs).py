@@ -1798,7 +1798,7 @@ if main_page:
             st.write("")
             st.write("")
             #col1, col3,col5, col2 = st.columns([0.5, 5.5, 0.5,5.5])
-            col3,col1,col2=st.columns([2,0.4,2])
+            col3,col1,col2=st.columns([2,0.2,2])
             with col3:
                     #bar_pie_bucket2 = st.radio("🔲 Select type of graph:", ["Bar charts", "Pie charts"], horizontal=True, key='bucket_bar_or_pie')
                     bin_show = st.selectbox("Select amount from dropdown list to show in graph:", 
@@ -1851,8 +1851,7 @@ if main_page:
                         
                 
                 
-                    bin_df_bar_dpd=bin_df_bar_dpd.update_layout(title_x=0.35,legend=dict(
-                                             orientation="h",font=dict(size= 10)))
+                    bin_df_bar_dpd.update_layout(title_x=0.35, legend=dict(orientation="h",font=dict(size= 10)))
                     #,font=dict(size= 15)
                     st.plotly_chart(bin_df_bar_dpd,use_container_width=True)
                      #use_column_width='auto'
