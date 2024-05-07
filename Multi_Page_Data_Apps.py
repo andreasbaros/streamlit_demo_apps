@@ -92,7 +92,7 @@ st.markdown(
 
 st.write("")   
 
-st.warning(""" * The **Banking Data Application** is a comprehensive tool designed to provide insights into the portfolio of 
+st.warning(""" * The **Non-Performing Loans Analysis** data application is a comprehensive tool designed to provide insights into the portfolio of 
            customers with non-performing loans in the banking sector. This Streamlit application offers a user-friendly
            interface for exploring and understanding the data related to non-performing loans, allowing banking 
            professionals to make informed decisions and take proactive measures to manage risk.
