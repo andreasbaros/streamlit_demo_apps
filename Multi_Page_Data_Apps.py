@@ -78,14 +78,14 @@ st.write("")
 st.markdown("""# <center><strong> 📊 :blue[Multi Page Data Applications] 📊</strong></center>""", unsafe_allow_html=True)
 st.write("")
 st.write("")
-st.info("""The :green[Multi Page Data Application] is crafted to provide you with valuable insights into your data. By harnessing the capabilities of data visualization tools, you can easily identify outliers and potential errors, ensuring data integrity while monitoring key metrics effortlessly. This enables capturing critical trends that empower better-informed decision-making and thorough analysis.""")
+#st.info("""The :green[Multi Page Data Application] is crafted to provide you with valuable insights into your data. By harnessing the capabilities of data visualization tools, you can easily identify outliers and potential errors, ensuring data integrity while monitoring key metrics effortlessly. This enables capturing critical trends that empower better-informed decision-making and thorough analysis.""")
 st.sidebar.success("☝️ Select an application from the above")
 
-st.write("")
-st.write("")
+#st.write("")
+#st.write("")
 st.markdown(
     """
-    ## <center><strong><u> :grey[Application Definitions - Brief Descriptions]</u></strong></center>
+    ### <center><strong><u> :grey[Application Definitions - Brief Descriptions]</u></strong></center>
     """,
     unsafe_allow_html=True
 )
