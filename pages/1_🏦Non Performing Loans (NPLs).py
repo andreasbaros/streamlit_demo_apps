@@ -1015,7 +1015,7 @@ if introduction:
     
     #st.header(":pushpin: Introduction")
     st.markdown("""## <center><strong>:pushpin: :blue[Introduction] </strong></center>""", unsafe_allow_html=True)
-    intro="📢 The :green[**Banking Data Insights application**] is a comprehensive tool designed to provide insights into the portfolio of Clients with non-performing loans in the banking sector. This Streamlit application offers a user-friendly interface for exploring and understanding the data related to non-performing loans, allowing banking professionals to make informed decisions and take proactive measures to manage risk."
+    intro="📢 The :green[**Non-Performing Loans Analysis**] data application is a comprehensive tool designed to provide insights into the portfolio of Clients with non-performing loans in the banking sector. This Streamlit application offers a user-friendly interface for exploring and understanding the data related to non-performing loans, allowing banking professionals to make informed decisions and take proactive measures to manage risk."
     
     
     disclaimer="⚠️🚩 :red[**Disclaimer**]: The data presented in this application are entirely fictional and are provided solely for demonstration purposes. Any resemblance to real data or actual financial situations is purely coincidental and unintentional."
