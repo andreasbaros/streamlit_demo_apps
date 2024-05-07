@@ -2305,9 +2305,9 @@ if main_page:
                     
                     group_cif=False
                     if group_or_cif=='CLient IDCs':
-                        cif_check=st.multiselect("Type or select :blue[Client IDCs] from dropdown list:", df['ClientIDC'].unique())
+                        cif_check=st.multiselect(f"Type or select :blue[{group_or_cif}] from dropdown list:", df['ClientIDC'].unique())
                     else:
-                        cif_check=st.multiselect("Type or select :blue[Group Client IDCs] from dropdown list:", df['GroupIDC'].unique())
+                        cif_check=st.multiselect(f"Type or select :blue[{group_or_cif}] from dropdown list:", df['GroupIDC'].unique())
                         group_cif=True
                     
                     fields=st.multiselect("Select fields from Data Tape:",df.columns)
