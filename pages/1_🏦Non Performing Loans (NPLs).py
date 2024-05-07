@@ -2117,7 +2117,7 @@ if main_page:
                                            selector=dict(type='box'))
                                            
                         fig5.update_layout(dragmode='select',
-                                           legend=dict(title='ProductType', orientation='h',yanchor='bottom',y=-0.4))
+                                           legend=dict(title='ProductType', orientation='h',yanchor='bottom'))
                         #fig5.update_yaxes(range=[-3,9])
                         
                     # elif select_hist=='ContractOutsdgPrinc':
