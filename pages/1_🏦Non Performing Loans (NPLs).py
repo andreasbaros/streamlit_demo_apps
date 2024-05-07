@@ -2103,7 +2103,7 @@ if main_page:
                                                       selector=dict(type='box'))
                                                       
                         fig5_portfolio2.update_layout(dragmode='select',
-                                                      legend=dict(title='ProductType', orientation='h'))
+                                                      legend=dict(title='ProductCategory', orientation='h'))
                         #fig5_portfolio2.update_yaxes(range=[-3,9])
                         
                         fig5 = px.box(df_woz, y='GrossLoanAmount', x=df_woz['ProductType'],log_y=True,points="all",
@@ -2117,7 +2117,7 @@ if main_page:
                                            selector=dict(type='box'))
                                            
                         fig5.update_layout(dragmode='select',
-                                           legend=dict(title='ProductType', orientation='h',yanchor='bottom'))
+                                           legend=dict(title='ProductType', orientation='h'))
                         #fig5.update_yaxes(range=[-3,9])
                         
                     # elif select_hist=='ContractOutsdgPrinc':
