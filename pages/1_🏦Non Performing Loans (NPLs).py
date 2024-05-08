@@ -591,12 +591,12 @@ df['Contract_NBV'] = df['GrossLoanAmount'] - df['GrossProvisionsAmount']
 Per_NPL_flag = df.groupby('NonPerformingLoan(NPL)', dropna=False)[['GrossLoanAmount', 'GrossProvisionsAmount', 'Contract_NBV','LoanCollateralValue']].sum()
 
 Per_NPL_flag['Number of Facilities'] = df.groupby('NonPerformingLoan(NPL)', dropna=False)['IndivIDC'].nunique()
-Per_NPL_flag['Number of CIFs'] = df.groupby('NonPerformingLoan(NPL)', dropna=False)['ClientIDC'].nunique()
-Per_NPL_flag['Number of Group CIFs'] = df.groupby('NonPerformingLoan(NPL)', dropna=False)['GroupIDC'].nunique()
+Per_NPL_flag['Number of IDCs'] = df.groupby('NonPerformingLoan(NPL)', dropna=False)['ClientIDC'].nunique()
+Per_NPL_flag['Number of Group IDCs'] = df.groupby('NonPerformingLoan(NPL)', dropna=False)['GroupIDC'].nunique()
 
 Per_NPL_flag.loc['Total'] = Per_NPL_flag.sum()
 
-Per_NPL_flag[['Number of Facilities', 'Number of CIFs', 'Number of Group CIFs']] = Per_NPL_flag[['Number of Facilities', 'Number of CIFs', 'Number of Group CIFs']].astype(int)
+Per_NPL_flag[['Number of Facilities', 'Number of IDCs', 'Number of Group IDCs']] = Per_NPL_flag[['Number of Facilities', 'Number of IDCs', 'Number of Group IDCs']].astype(int)
 
 Per_NPL_flag = Per_NPL_flag.reset_index()
 
@@ -614,12 +614,12 @@ Per_NPL_flag_formatted = Per_NPL_flag.copy()
 # Summarize Facilities dataframe per Product type add 'Number of Facilities'column and 'Total'row
 Per_product = df.groupby('ProductType', dropna=False)[['GrossLoanAmount', 'GrossProvisionsAmount', 'Contract_NBV', 'LoanCollateralValue']].sum()
 Per_product['Number of Facilities'] = df.groupby('ProductType')['IndivIDC'].nunique()
-Per_product['Number of CIFs'] = df.groupby('ProductType')['ClientIDC'].nunique()
-Per_product['Number of Group CIFs'] = df.groupby('ProductType')['GroupIDC'].nunique()
+Per_product['Number of IDCs'] = df.groupby('ProductType')['ClientIDC'].nunique()
+Per_product['Number of Group IDCs'] = df.groupby('ProductType')['GroupIDC'].nunique()
 
 Per_product.loc['Total'] = Per_product.sum()
 
-Per_product[['Number of Facilities', 'Number of CIFs', 'Number of Group CIFs']] = Per_product[['Number of Facilities', 'Number of CIFs', 'Number of Group CIFs']].astype(int)
+Per_product[['Number of Facilities', 'Number of IDCs', 'Number of Group IDCs']] = Per_product[['Number of Facilities', 'Number of IDCs', 'Number of Group IDCs']].astype(int)
 
 Per_product = Per_product.reset_index()
 Per_product.iloc[:-1,:] = Per_product.iloc[:-1,:].sort_values(by='GrossLoanAmount', ascending=False)
@@ -634,12 +634,12 @@ Per_product_formatted = Per_product.copy()
 
 Per_risk = df.groupby('RiskClass', dropna=False)[['GrossLoanAmount', 'GrossProvisionsAmount', 'Contract_NBV', 'LoanCollateralValue']].sum()
 Per_risk['Number of Facilities'] = df.groupby('RiskClass')['IndivIDC'].nunique()
-Per_risk['Number of CIFs'] = df.groupby('RiskClass')['ClientIDC'].nunique()
-Per_risk['Number of Group CIFs'] = df.groupby('RiskClass')['GroupIDC'].nunique()
+Per_risk['Number of IDCs'] = df.groupby('RiskClass')['ClientIDC'].nunique()
+Per_risk['Number of Group IDCs'] = df.groupby('RiskClass')['GroupIDC'].nunique()
 
 Per_risk.loc['Total'] = Per_risk.sum()
 
-Per_risk[['Number of Facilities', 'Number of CIFs', 'Number of Group CIFs']] = Per_risk[['Number of Facilities', 'Number of CIFs', 'Number of Group CIFs']].astype(int)
+Per_risk[['Number of Facilities', 'Number of IDCs', 'Number of Group IDCs']] = Per_risk[['Number of Facilities', 'Number of IDCs', 'Number of Group IDCs']].astype(int)
 
 Per_risk = Per_risk.reset_index()
 #Per_risk.iloc[:-1,:] = Per_risk.iloc[:-1,:].sort_values(by='GrossLoanAmount', ascending=False)
@@ -652,12 +652,12 @@ Per_risk_formatted = Per_risk.copy()
 
 Per_NPL_class = df.groupby('NonPerformingLoan(NPL)', dropna=False)[['GrossLoanAmount', 'GrossProvisionsAmount', 'Contract_NBV', 'LoanCollateralValue']].sum()
 Per_NPL_class['Number of Facilities'] = df.groupby('NonPerformingLoan(NPL)')['IndivIDC'].nunique()
-Per_NPL_class['Number of CIFs'] = df.groupby('NonPerformingLoan(NPL)')['ClientIDC'].nunique()
-Per_NPL_class['Number of Group CIFs'] = df.groupby('NonPerformingLoan(NPL)')['GroupIDC'].nunique()
+Per_NPL_class['Number of IDCs'] = df.groupby('NonPerformingLoan(NPL)')['ClientIDC'].nunique()
+Per_NPL_class['Number of Group IDCs'] = df.groupby('NonPerformingLoan(NPL)')['GroupIDC'].nunique()
 
 Per_NPL_class.loc['Total'] = Per_NPL_class.sum()
 
-Per_NPL_class[['Number of Facilities', 'Number of CIFs', 'Number of Group CIFs']] = Per_NPL_class[['Number of Facilities', 'Number of CIFs', 'Number of Group CIFs']].astype(int)
+Per_NPL_class[['Number of Facilities', 'Number of IDCs', 'Number of Group IDCs']] = Per_NPL_class[['Number of Facilities', 'Number of IDCs', 'Number of Group IDCs']].astype(int)
 
 Per_NPL_class = Per_NPL_class.reset_index()
 #Per_risk.iloc[:-1,:] = Per_risk.iloc[:-1,:].sort_values(by='GrossLoanAmount', ascending=False)
@@ -778,11 +778,11 @@ fig4 = px.pie(Per_product.iloc[:-1,:], values='GrossLoanAmount', names=Per_produ
 Per_product_ultra3 = df.groupby('ProductCategory')[['GrossLoanAmount', 'GrossProvisionsAmount', 'Contract_NBV', 'LoanCollateralValue']].sum()
 
 Per_product_ultra3['Number of Facilities'] = df.groupby('ProductCategory')[['IndivIDC']].nunique()
-Per_product_ultra3['Number of CIFs'] = df.groupby('ProductCategory')[['ClientIDC']].nunique()
-Per_product_ultra3['Number of Group CIFs'] = df.groupby('ProductCategory')[['GroupIDC']].nunique()
+Per_product_ultra3['Number of IDCs'] = df.groupby('ProductCategory')[['ClientIDC']].nunique()
+Per_product_ultra3['Number of Group IDCs'] = df.groupby('ProductCategory')[['GroupIDC']].nunique()
 
 Per_product_ultra3.loc['Total'] = Per_product_ultra3.sum()
-Per_product_ultra3[['Number of Facilities', 'Number of CIFs', 'Number of Group CIFs']] = Per_product_ultra3[['Number of Facilities', 'Number of CIFs', 'Number of Group CIFs']].astype(int)
+Per_product_ultra3[['Number of Facilities', 'Number of IDCs', 'Number of Group IDCs']] = Per_product_ultra3[['Number of Facilities', 'Number of IDCs', 'Number of Group IDCs']].astype(int)
 
 Per_product_ultra3 = Per_product_ultra3.reset_index()
 Per_product_ultra3.iloc[:-1,:] = Per_product_ultra3.iloc[:-1,:].sort_values(by='GrossLoanAmount', ascending=False)
@@ -1222,7 +1222,7 @@ if main_page:
                       ["Total Real Estate Collateral Legal Claim Value",'€{:,.0f}'.format(df.loc[:, 'LoanCollateralValue'].sum())],
                       #["Total OMV",'€{:,.0f}'.format(properties.loc[:, 'PopOMVfinal'].sum())],
                       ["Total Number of Facilities",'€{:,.0f}'.format(int(df['IndivIDC'].nunique()))],
-                      ["Total Number of CIFs",'€{:,.0f}'.format(int(df['ClientIDC'].nunique()))],
+                      ["Total Number of IDCs",'€{:,.0f}'.format(int(df['ClientIDC'].nunique()))],
                       #["Total Number of Properties",'€{:,.0f}'.format(properties.loc[:,'PropID'].nunique())]
                       ]
             # Other metrics ...
@@ -2293,10 +2293,10 @@ if main_page:
     with tab1:
         form_check=False
     
-        export_type=st.radio("Export data based on:",['CIFs','Filtered Values'], horizontal=True)
-        if export_type=='CIFs':
+        export_type=st.radio("Export data based on:",['IDCs','Filtered Values'], horizontal=True)
+        if export_type=='IDCs':
             st.info("In this section you can filter and export data from the dataset based on specific Client IDCs or Group IDCs.")
-            #manual_input=st.toggle("Input CIFs manually")
+            #manual_input=st.toggle("Input IDCs manually")
             
             #if manual_input:
             group_or_cif=st.radio("Filter data based on:",['Client IDCs','Group Client IDCs'],horizontal=False)
@@ -2355,7 +2355,7 @@ if main_page:
             #                 transpose=pd.DataFrame(cif_check2.iloc[:,0].unique())
             #                 transpose.index+=1
             #                 #transpose_df=transpose(cif_check2)
-            #                 transpose.index.names=['CIFs']
+            #                 transpose.index.names=['IDCs']
             #                 transpose=transpose.T
             #                 st.dataframe(transpose,hide_index=True)
                             
@@ -2364,31 +2364,31 @@ if main_page:
             #                 found_in_file=df[df['ClientIDC'].isin(cif_check2),'ClientIDC'].unique()
             #                 found_in_file=pd.DataFrame(found_in_file)
             #                 found_in_file.index+=1
-            #                 found_in_file.index.names=['CIFs']
+            #                 found_in_file.index.names=['IDCs']
             #                 found_in_file_transpose=found_in_file.T
                             
-            #                 upload_message_found=f"<strong><code>{len(found_in_file)}</code></strong> CIFs :green[FOUND] in the Data Tape:"
+            #                 upload_message_found=f"<strong><code>{len(found_in_file)}</code></strong> IDCs :green[FOUND] in the Data Tape:"
             #                 st.markdown(upload_message_found,unsafe_allow_html=True)
             #                 st.dataframe(found_in_file_transpose,hide_index=True)
                             
             #                 transpose_v2=transpose.T.copy()
             #                 transpose_v2.index.names=['index']
-            #                 transpose_v2.rename(columns={ transpose_v2.columns[0]: "CIFs" }, inplace=True)
+            #                 transpose_v2.rename(columns={ transpose_v2.columns[0]: "IDCs" }, inplace=True)
                                           
                             
             #                 found_in_file_v2=found_in_file.transpose.T.copy()
             #                 found_in_file_v2.index.names=['index']
-            #                 found_in_file_v2.rename(columns={ found_in_file_v2.columns[0]: "CIFs" }, inplace=True)
+            #                 found_in_file_v2.rename(columns={ found_in_file_v2.columns[0]: "IDCs" }, inplace=True)
                             
-            #                 not_found_in_file=transpose_v2.loc[~transpose_v2['CIFs'].isin(found_in_file_v2['CIFs']), 'CIFs'].unique()
+            #                 not_found_in_file=transpose_v2.loc[~transpose_v2['IDCs'].isin(found_in_file_v2['IDCs']), 'IDCs'].unique()
             #                 not_found_in_file=pd.DataFrame(not_found_in_file)
             #                 not_found_in_file.index+=1
             #                 not_found_in_file.index.names=['index']
-            #                 not_found_in_file.rename(columns={ not_found_in_file.columns[0]: "CIFs" }, inplace=True)
+            #                 not_found_in_file.rename(columns={ not_found_in_file.columns[0]: "IDCs" }, inplace=True)
                             
             #                 not_found_in_file_transpose=not_found_in_file.T.copy()
                             
-            #                 upload_message_not_found="<strong><code>{len(not_found_in_file)}</code></strong> CIFs were :red:[NOT FOUND] in the Datatape:"
+            #                 upload_message_not_found="<strong><code>{len(not_found_in_file)}</code></strong> IDCs were :red:[NOT FOUND] in the Datatape:"
             #                 st.markdown(upload_message_not_found, unsafe_allow_html=True)
             #                 st.dataframe(not_found_in_file_transpose,hide_index=True)
                             
@@ -2397,11 +2397,11 @@ if main_page:
             #                 fields=st.multiselect("Select fields from Data Tape:", df.columns)
                             
                             
-            #             submitted=st.form_submit_button("View data for selected CIFs")    
+            #             submitted=st.form_submit_button("View data for selected IDCs")    
                         
             #             if submitted:
             #                 if cif_file is None:
-            #                     st.error("No CIF File has been provided or CIF/CIFs not in the Data Tape.")
+            #                     st.error("No IDC File has been provided or IDC/IDCs not in the Data Tape.")
             #                 else:
             #                     matching_cifs=[cif for cif in cif_check2 if cif in df['ClientIDC'].values]
             #                     if matching_cifs:
@@ -2415,7 +2415,7 @@ if main_page:
             #                         df_filtered=df_f[fields2]
             #                         form_check=True
             #                     else:
-            #                         st.error("No CIF(s) have been provided or CIF/CIFs not in the Data Tape.")
+            #                         st.error("No IDC(s) have been provided or IDC/IDCs not in the Data Tape.")
                     
             if form_check:
                         #df_f['ReferenceDate']=pd.to_datetime(df_f['ReferenceDate'], format='%d/%m/%Y')
@@ -2431,7 +2431,7 @@ if main_page:
                         
                             df_filtered[col]=pd.to_datetime(df_filtered[col]).dt.strftime('%d/%m/%Y')
                     
-                        export_message=f"Data Tape data: <strong><code>{len(pd.unique(df_filtered['GroupIDC']))}</code></strong> unique Groups CIFs with <strong><code>{len(pd.unique(df_filtered['ClientIDC']))}</code></strong> unique CIFs:"
+                        export_message=f"Data Tape data: <strong><code>{len(pd.unique(df_filtered['GroupIDC']))}</code></strong> unique Groups IDCs with <strong><code>{len(pd.unique(df_filtered['ClientIDC']))}</code></strong> unique IDCs:"
                         st.markdown(export_message, unsafe_allow_html=True)
                         
                         st.dataframe(df_filtered, hide_index=True)
