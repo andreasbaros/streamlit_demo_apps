@@ -1831,36 +1831,7 @@ if main_page:
                     bin_df_download=bin_df.copy()
                     bin_df_download['GrossLoanAmount Percentage (%)']=bin_df_download['GrossLoanAmount Percentage (%)']/100
                     
-                    
-                
-            with col2:
-                    st.write("")
-                    st.write("")
-                    st.write("")
-                    st.write("")
-                    st.write("")
-                    st.write("")
-                    
-                    bin_df_bar_dpd=px.bar(bin_df_dpd, x="Payment Delay Days Bucket", y=bin_show, title=f"{bin_show} per Payment Delay Days Bucket", color="Payment Delay Days Bucket")
-                    
-                
-                    if bin_show=="Number of Facilities":
-                        bin_df_bar_dpd.update_traces(texttemplate='<br>%{y:,.0f}')
-                    else:
-                        bin_df_bar_dpd.update_traces(texttemplate='<br>€%{y:,.5s}')
-                        
-                
-                
-                    bin_df_bar_dpd.update_layout(title_x=0.35, legend=dict(y=-0.2,orientation="h",font=dict(size= 11)))
-                    #,font=dict(size= 15)
-                    st.plotly_chart(bin_df_bar_dpd,use_container_width=True)
-                     #use_column_width='auto'
-            
-                    
-            #colbl2,col2a,colbl,col2b,colbl3=st.columns([0.5,10,1.4,10,0.5])
-            col3t,col1t,col2t=st.columns([2,0.25,2])
-            with col3t:
-                with st.expander("**View data in tabular format:**"):
+                    with st.expander("**View data in tabular format:**"):
                     st.write("")
                     
                     st.markdown("<strong> Gross Loan Amount and Number of Facilities per Bucket:</strong>",unsafe_allow_html=True)
@@ -1885,8 +1856,29 @@ if main_page:
                             writer.close()
                             st.download_button('💾 Download table to excel', data=buffer, file_name=file_export_name, mime='application/vnd.ms-excel', key="table1")
                 
-            
-            with col2t:
+                
+            with col2:
+                    st.write("")
+                    st.write("")
+                    st.write("")
+                    st.write("")
+                    st.write("")
+                    st.write("")
+                    
+                    bin_df_bar_dpd=px.bar(bin_df_dpd, x="Payment Delay Days Bucket", y=bin_show, title=f"{bin_show} per Payment Delay Days Bucket", color="Payment Delay Days Bucket")
+                    
+                
+                    if bin_show=="Number of Facilities":
+                        bin_df_bar_dpd.update_traces(texttemplate='<br>%{y:,.0f}')
+                    else:
+                        bin_df_bar_dpd.update_traces(texttemplate='<br>€%{y:,.5s}')
+                        
+                
+                
+                    bin_df_bar_dpd.update_layout(title_x=0.35, legend=dict(y=-0.2,orientation="h",font=dict(size= 11)))
+                    #,font=dict(size= 15)
+                    st.plotly_chart(bin_df_bar_dpd,use_container_width=True)
+
                     with st.expander("**View data in tabular format:**"):
                         st.write("")
                     
@@ -1914,6 +1906,67 @@ if main_page:
                             ).to_excel(writer, sheet_name='exported_data', index=None)
                             writer.close()
                             st.download_button('💾 Download table to excel', data=buffer, file_name=file_export_name, mime='application/vnd.ms-excel', key="table_dpd_bucket1")
+                
+                     #use_column_width='auto'
+            
+                    
+            #colbl2,col2a,colbl,col2b,colbl3=st.columns([0.5,10,1.4,10,0.5])
+            #col3t,col1t,col2t=st.columns([2,0.25,2])
+            #with col3t:
+             #   with st.expander("**View data in tabular format:**"):
+              #      st.write("")
+                    
+               #     st.markdown("<strong> Gross Loan Amount and Number of Facilities per Bucket:</strong>",unsafe_allow_html=True)
+                #    st.dataframe(bin_df_formatted,hide_index=True)
+                    # st.dataframe(bin_df_download.style.map(
+                    #     lambda _: "background-color:LightSkyBlue;",subset=([len(bin_df_formatted)],slice(None))
+                    #     ),hide_index=True)
+                    
+                    
+                        
+                                    
+                 #   buffer = io.BytesIO()
+                  #  current_datetime = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+                   # str_current_datetime = str(current_datetime)
+                    #file_export_name = "exported_data_" + str_current_datetime + ".xlsx"
+                        
+                    #with pd.ExcelWriter(buffer, engine='openpyxl') as writer:
+                     #       bin_df_download.style.applymap(
+                      #          lambda _: 'background-color: LightSkyBlue;', subset=(len(bin_df_formatted), slice(None))
+                       #     ).to_excel(writer, sheet_name='exported_data', index=None)
+                            #writer.save()
+                        #    writer.close()
+                         #   st.download_button('💾 Download table to excel', data=buffer, file_name=file_export_name, mime='application/vnd.ms-excel', key="table1")
+                
+            
+            #with col2t:
+             #       with st.expander("**View data in tabular format:**"):
+              #          st.write("")
+                    
+               #         st.markdown("<strong>Gross Loan Amount and Number of Facilities per Payment Delay Days buckets:</strong>", unsafe_allow_html=True)
+                #        st.dataframe(bin_df_dpd_formatted,hide_index=True)
+                        
+                        # st.dataframe(bin_df_dpd_formatted.style.map(
+                        #     lambda _: 'background-color: LightSkyBlue;', subset=([len(bin_df_dpd_formatted)], slice(None))
+                        #     ),hide_index=True)
+                 #       bin_df_dpd_download=bin_df_dpd.copy()
+                        
+                        
+                  #      bin_df_dpd_download['GrossLoanAmount Percentage (%)'] = bin_df_dpd_download['GrossLoanAmount Percentage (%)']/100
+                        
+                        
+                        
+                   #     buffer = io.BytesIO()
+                    #    current_datetime = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+                     #   str_current_datetime = str(current_datetime)
+                      #  file_export_name = "exported_data_" + str_current_datetime + ".xlsx"
+                    
+                       # with pd.ExcelWriter(buffer, engine='openpyxl') as writer:
+                        #    bin_df_dpd_download.style.applymap(
+                         #       lambda _: 'background-color: LightSkyBlue;', subset=(len(bin_df_dpd_formatted), slice(None))
+                          #  ).to_excel(writer, sheet_name='exported_data', index=None)
+                           # writer.close()
+                            #st.download_button('💾 Download table to excel', data=buffer, file_name=file_export_name, mime='application/vnd.ms-excel', key="table_dpd_bucket1")
                 
                 
             
