@@ -1759,10 +1759,10 @@ if main_page:
                 
                 if funnel_treemap == 'Treemap chart':
                     st.plotly_chart(fig_area_group, use_container_width=True)
-                    #st.plotly_chart(fig_area_group)
+                    
                 else:
                     st.plotly_chart(fig_funnel, use_container_width=True)
-                    #st.plotly_chart(fig_funnel)
+                    
                 
             with col3:
                     st.write("")
