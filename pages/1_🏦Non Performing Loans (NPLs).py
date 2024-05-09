@@ -1739,7 +1739,7 @@ if main_page:
                                       
                 fig_funnel.update_traces(texttemplate='<br>€%{x:.3s}',hovertemplate='<b></b>%{y}'+'<br>Gross Loan Amount: €%{x:,.0f}'+'<br>Group IDC: %{customdata[0]}')
                 fig_funnel.update_yaxes(categoryorder='total descending')
-                fig_funnel.update_layout(title=f'Top {number_top} Group Clients by Gross Loan Amount', legend=dict(x=0, y=-0.08, orientation="h"), title_x=0.5)
+                fig_funnel.update_layout(title=f'Top {number_top} Group Clients by Gross Loan Amount', legend=dict(x=0, y=-0.08, orientation="h"))
                 #fig_funnel.update_layout(title='Top {number_top} Group CIFs by Gross Loan Amount', legend=dict(x=0.3, y=-0.2, orientation="h"), title_x=0.5)
                 
                 fig_funnel.update_layout(showlegend=False)
