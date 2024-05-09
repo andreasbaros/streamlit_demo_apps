@@ -1811,7 +1811,7 @@ if main_page:
                     color_graph=color_map[bin_show]
                     
                     bin_df_bar3=px.bar(bin_df, x="Gross Loan Amount Bucket", y=bin_show, title=f"{bin_show} per Gross Loan Amount Bucket",
-                                       color='Gross Loan Amount Bucket')
+                                       color='Gross Loan Amount Bucket', height=600)
                        #bin_df_bar3.update_traces(texttemplate="%{x}<br>%{y:.3s}")
                     if bin_show=="Number of Facilities":
                            bin_df_bar3.update_traces(texttemplate="<br>%{y:,.0f}")
@@ -1865,7 +1865,7 @@ if main_page:
                     st.write("")
                     st.write("")
                     
-                    bin_df_bar_dpd=px.bar(bin_df_dpd, x="Payment Delay Days Bucket", y=bin_show, title=f"{bin_show} per Payment Delay Days Bucket", color="Payment Delay Days Bucket")
+                    bin_df_bar_dpd=px.bar(bin_df_dpd, x="Payment Delay Days Bucket", y=bin_show, title=f"{bin_show} per Payment Delay Days Bucket", color="Payment Delay Days Bucket",height=600)
                     
                 
                     if bin_show=="Number of Facilities":
