@@ -1832,10 +1832,10 @@ if main_page:
                     bin_df_download['GrossLoanAmount Percentage (%)']=bin_df_download['GrossLoanAmount Percentage (%)']/100
                     
                     with st.expander("**View data in tabular format:**"):
-                    st.write("")
+                        st.write("")
                     
-                    st.markdown("<strong> Gross Loan Amount and Number of Facilities per Bucket:</strong>",unsafe_allow_html=True)
-                    st.dataframe(bin_df_formatted,hide_index=True)
+                        st.markdown("<strong> Gross Loan Amount and Number of Facilities per Bucket:</strong>",unsafe_allow_html=True)
+                        st.dataframe(bin_df_formatted,hide_index=True)
                     # st.dataframe(bin_df_download.style.map(
                     #     lambda _: "background-color:LightSkyBlue;",subset=([len(bin_df_formatted)],slice(None))
                     #     ),hide_index=True)
@@ -1843,12 +1843,12 @@ if main_page:
                     
                         
                                     
-                    buffer = io.BytesIO()
-                    current_datetime = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-                    str_current_datetime = str(current_datetime)
-                    file_export_name = "exported_data_" + str_current_datetime + ".xlsx"
+                        buffer = io.BytesIO()
+                        current_datetime = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+                        str_current_datetime = str(current_datetime)
+                        file_export_name = "exported_data_" + str_current_datetime + ".xlsx"
                         
-                    with pd.ExcelWriter(buffer, engine='openpyxl') as writer:
+                        with pd.ExcelWriter(buffer, engine='openpyxl') as writer:
                             bin_df_download.style.applymap(
                                 lambda _: 'background-color: LightSkyBlue;', subset=(len(bin_df_formatted), slice(None))
                             ).to_excel(writer, sheet_name='exported_data', index=None)
