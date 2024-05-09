@@ -1758,10 +1758,10 @@ if main_page:
                 funnel_treemap = st.radio("📊 Select type of graph:", ["Treemap chart", "Funnel chart"], horizontal=True, key='funnel_chart_or_treemap')
                 
                 if funnel_treemap == 'Treemap chart':
-                    st.plotly_chart(fig_area_group, use_column_width='auto')
+                    st.plotly_chart(fig_area_group, use_container_width=True)
                     #st.plotly_chart(fig_area_group)
                 else:
-                    st.plotly_chart(fig_funnel, use_column_width='auto')
+                    st.plotly_chart(fig_funnel, use_container_width=True)
                     #st.plotly_chart(fig_funnel)
                 
             with col3:
