@@ -97,8 +97,10 @@ st.warning(""" * The :green[**Non-Performing Loans Analysis**] application is a 
            interface for exploring and understanding the data related to non-performing loans, allowing banking 
            professionals to make informed decisions and take proactive measures to manage risk.
             """)
-            
-            
+
+st.warning(""" * The:green[ Business Intelligence App] allows you to upload any CSV or Excel file and dive into data visualization with PyGWalker.
+PyGWalker is an intuitive platform that allows easy, drag-and-drop interactions for a dynamic analysis experience.
+Perfect for anyone looking to quickly visualize and understand data patterns without any coding. """)     
 # st.info(text)
 # st.success(text)
 # st.warning(text)
