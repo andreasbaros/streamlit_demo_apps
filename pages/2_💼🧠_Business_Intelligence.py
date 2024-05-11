@@ -67,14 +67,14 @@ with tab1:
                 file_extension=uploaded_file.name.split('.')[-1]     
                 try:
                   if file_extension=='csv':
-                     #df=pd.read_csv(uploaded_file)
-                     df=load_data_csv(uploaded_file)
+                     df=pd.read_csv(uploaded_file)
+                     #df=load_data_csv(uploaded_file)
                      st.dataframe(df.head())
                      pygwalker_app=StreamlitRenderer(df,dark="dark")
                      pygwalker_app.explorer()
                   elif file_extension=='xlsx':
-                       #df=pd.read_excel(uploaded_file)
-                       df=load_data_excel(uploaded_file)
+                       df=pd.read_excel(uploaded_file)
+                       #df=load_data_excel(uploaded_file)
                        st.dataframe(df.head())
                        pygwalker_app=StreamlitRenderer(df,dark="dark")
                        pygwalker_app.explorer()
