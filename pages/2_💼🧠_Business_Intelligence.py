@@ -92,6 +92,7 @@ with tab2:
         st.markdown("🎬 <u>:red[**YouTube videos:**]</u>",unsafe_allow_html=True)
         st.link_button("Elwynn Chen, the creator of PyGWalker, gives a walkthrough on how to get started with PyGWalker.","https://www.youtube.com/watch?v=rprn79wfB9E")
         st.link_button(" A Tableau Alternative in Python for Data Analysis (in Streamlit & Jupyter) | PyGWalker Tutorial","https://www.youtube.com/watch?v=Ynt7Etci1KU")
+        st.link_button(" PyGWalker for Exploratory Data Analysis In Jupyter Notebooks","https://www.youtube.com/watch?v=3WjWeH3HIMo")
         st.link_button(" PyGWalker Crash Course - Data Visualization Like Tableau In Python","https://www.youtube.com/watch?v=68dFRqdxSrI")
         
         
