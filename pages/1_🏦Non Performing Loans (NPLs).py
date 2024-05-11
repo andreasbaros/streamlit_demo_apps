@@ -691,7 +691,7 @@ riskclass_pie.update_traces(textinfo='value+percent+label',
                              hovertemplate='%{label}''<br>%{percent:,.2%}')
  
 
-riskclass_pie.update_layout(height=550,width=800,title_x=0.35,legend=dict(
+riskclass_pie.update_layout(height=550,width=800,legend=dict(
                                             orientation="h",xanchor="center",x=0.5,font=dict(size= 16)),
     ) 
 
@@ -706,7 +706,7 @@ NPL_pie.update_traces(textinfo='value+percent+label',
                              texttemplate='%{label}''<br>%{percent:,.2%}''<br>€%{customdata[1]:.5s}',
                              hovertemplate='%{label}''<br>%{percent:,.2%}')
 
-NPL_pie.update_layout(height=550,width=800,title_x=0.35,legend=dict(
+NPL_pie.update_layout(height=550,width=800,legend=dict(
                                             orientation="h",xanchor="center",x=0.5,font=dict(size= 16)))
 # Summarize Properties dataframe per Land Type add 'Number of Properties', 'Percent xxx'and 'Average'columns and 'Total'row
 # land_type = properties.groupby('PropLanType', dropna=False)[['PropOMVFinal']].sum()
