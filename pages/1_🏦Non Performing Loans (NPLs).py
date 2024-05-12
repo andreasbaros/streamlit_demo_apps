@@ -1017,7 +1017,7 @@ if introduction:
     #st.header(":pushpin: Introduction")
     intro3,intro1,intro2=st.columns([1,5,1])
     with intro1:
-        disclaimer="⚠️🚩 :red[**Disclaimer**]: The data presented in this application are entirely fictional and are provided solely for demonstration purposes.  \nAny resemblance to real data or actual financial situations is purely coincidental and unintentional."
+        disclaimer="⚠️🚩 :red[**Disclaimer**]: The data presented in this application are entirely fictional and are provided solely for demonstration purposes. Any resemblance to real data or actual financial situations is purely coincidental and unintentional."
         st.info(disclaimer)
         st.markdown("""## <center><strong>:pushpin: :blue[Introduction] </strong></center>""", unsafe_allow_html=True)
     intro="📢 The :green[**Non-Performing Loans Analysis**] application is a comprehensive tool engineered to deliver insightful analytics on non-performing loan portfolios within the banking sector. This application, developed using Streamlit, features an intuitive interface that enables banking professionals to effectively explore and comprehend data concerning non-performing loans. By leveraging this tool, professionals can make well-informed decisions and implement proactive strategies to mitigate risk."
