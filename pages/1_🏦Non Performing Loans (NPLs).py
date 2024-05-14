@@ -1818,7 +1818,7 @@ if main_page:
                     else:
                            bin_df_bar3.update_traces(texttemplate="<br>€%{y:.5s}")
                     
-                    bin_df_bar3.update_layout(title_x=0.35, legend=dict(y=-0.2,orientation="h",font=dict(size= 11)))
+                    bin_df_bar3.update_layout(legend=dict(y=-0.2,orientation="h",font=dict(size= 11)))
                     #
     
                     bin_df_pie=px.pie(bin_df.iloc[:-1, :], values=bin_show, names='Gross Loan Amount Bucket', hole=.35, title=f"{bin_show} per Bucket")
@@ -1875,7 +1875,7 @@ if main_page:
                         
                 
                 
-                    bin_df_bar_dpd.update_layout(title_x=0.35, legend=dict(y=-0.2,orientation="h",font=dict(size= 11)))
+                    bin_df_bar_dpd.update_layout(legend=dict(y=-0.2,orientation="h",font=dict(size= 11)))
                     #,font=dict(size= 15)
                     st.plotly_chart(bin_df_bar_dpd,use_container_width=True)
 
