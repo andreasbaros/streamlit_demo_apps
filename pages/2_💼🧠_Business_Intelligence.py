@@ -40,7 +40,7 @@ st.write("")
 col1,col2,col3=st.columns([1,4,1])
 with col2:
    st.info(intro)
-   st.video("https://www.youtube.com/watch?v=rprn79wfB9E") 
+   #st.video("https://www.youtube.com/watch?v=rprn79wfB9E") 
 
 #st.markdown("""## <center><strong>🔎 :blue[Explore Your Data Instantly] 📊</strong></center>""", unsafe_allow_html=True)
 
