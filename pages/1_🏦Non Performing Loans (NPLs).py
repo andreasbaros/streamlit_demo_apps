@@ -1043,7 +1043,6 @@ if main_page:
     tab2, tab1,tab3,tabref,appendix = st.tabs([" 📊 Data Analytics ", " 🔎 Data Extraction ", " Data Dictionary ","📚 References - Reading Material","📑 APPENDIX"])
     # Data Emojis | 📊 📈 🖥️ 🧮 💻 📑 🗄️ 📊 📈 🖥️ 🧮 💻 📑 🗄️ | Copy & Paste
 
-    #st.info("In this section you can upload a CSV file with a list of CIFs you would like to extract data from the APS Data Tape. Alternatively, you can click on the switch and use the dictionary lookup.")
     
     with appendix:
         
@@ -1661,7 +1660,7 @@ if main_page:
         
         contracts_checked=True
         #st.divider()
-        #if st.checkbox("Click to view Contract data sample:", help="First 8 rows from the APS Data Tape Contracts tab are shown for reference"):
+        #if st.checkbox("Click to view Contract data sample:", help="First 8 rows from the  Data Set Contracts tab are shown for reference"):
         # if option == 'Clients':
         #     st.dataframe(borrowers.head(10))
         # elif option == 'Contracts':
@@ -2363,7 +2362,7 @@ if main_page:
                         cif_check=st.multiselect(f"Type or select :blue[{group_or_cif}] from dropdown list:", df['GroupIDC'].unique())
                         group_cif=True
                     
-                    fields=st.multiselect("Select fields from Data Tape:",df.columns)
+                    fields=st.multiselect("Select fields from Dataset:",df.columns)
                     submitted=st.form_submit_button(f"View data for selected :blue[{group_or_cif}]")
                     if submitted:
                         if group_cif:
@@ -2382,7 +2381,7 @@ if main_page:
                             
                             form_check=True
                         else:
-                                st.error(f"No {group_or_cif} have been provided or {group_or_cif} is not in the Data Tape. Please try again.")
+                                st.error(f"No {group_or_cif} have been provided or {group_or_cif} is not in the Dataset. Please try again.")
                                 
             # else:                    
             #         with st.form("user_input_2"):
@@ -2484,7 +2483,7 @@ if main_page:
                         
                             df_filtered[col]=pd.to_datetime(df_filtered[col]).dt.strftime('%d/%m/%Y')
                     
-                        export_message=f"Data Tape data: <strong><code>{len(pd.unique(df_filtered['GroupIDC']))}</code></strong> unique Groups IDCs with <strong><code>{len(pd.unique(df_filtered['ClientIDC']))}</code></strong> unique IDCs:"
+                        export_message=f"Dataset data: <strong><code>{len(pd.unique(df_filtered['GroupIDC']))}</code></strong> unique Groups IDCs with <strong><code>{len(pd.unique(df_filtered['ClientIDC']))}</code></strong> unique IDCs:"
                         st.markdown(export_message, unsafe_allow_html=True)
                         
                         st.dataframe(df_filtered, hide_index=True)
@@ -2505,7 +2504,7 @@ if main_page:
                             
                             
         if (export_type=='Filtered Values'):
-            st.info("In this section you can export data from the NPL Data Tape by filtering the below fields",icon="ℹ️")
+            st.info("In this section you can export data from the dataset by filtering the below fields",icon="ℹ️")
             #if st.checkbox("Apply Filters"):
             form_check2=False
             with st.form("data_filtering"):
