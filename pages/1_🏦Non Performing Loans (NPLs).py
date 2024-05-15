@@ -2509,7 +2509,7 @@ if main_page:
             #if st.checkbox("Apply Filters"):
             form_check2=False
             with st.form("data_filtering"):
-                    st.warning("Click on 'Refresh-Submit selected Filters'button below each time you change something to refresh data.")
+                    st.warning("Click on 'Refresh-Submit selected Filters' button below each time you change something to refresh data.")
                     
                     col1,col2,col3,col4=st.columns(4)
                     # conditions=[
@@ -2519,8 +2519,8 @@ if main_page:
                     # Choices for 'DEMAND''TERMINATED', etc.
                     #df['Terminated Flag']=np.select(conditions,choices,default='TERMINATED')
                     with col1:
-                        zero_val=st.checkbox("Exclude Zero On Balance Values")
-                        blank_dpd=st.checkbox("Exclude blank DPD values")
+                        zero_val=st.checkbox("Exclude Zero Gross Loan Amount Values")
+                        blank_dpd=st.checkbox("Exclude blank Payment Delay Days")
                         DPD_min=st.number_input("Payment Delay Days 'greater than:",
                                                    min_value=int(df['PaymentDelayDays'].min()),
                                                    max_value=int(df['PaymentDelayDays'].max()),
