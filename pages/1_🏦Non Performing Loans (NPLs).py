@@ -1681,12 +1681,10 @@ if main_page:
             # st.write("")
             # st.write("")
             st.markdown("""### <center><strong>:pushpin: :blue[Top Clients Analysis] </strong></center>""", unsafe_allow_html=True)
-            # col1, col2, col3 = st.columns([5, 4, 4])
-            # with col2:
-            #     st.subheader(":blue[Top Group CIFs Analysis]")
+           
             
             #col1, col2,col5, col3 = st.columns([0.5, 5.5, 0.5,5.5])
-            col2,col1,col3=st.columns([2,0.5,2])
+            col2,col1,col3=st.columns([2,0.25,2])
             with col2:
                 st.write("")
                 st.write("")
