@@ -2534,21 +2534,21 @@ if main_page:
             
                         date_filter=st.radio("Filter :blue[Date Client Turned NPL]:", ['Prior than','Later than','Between dates'],horizontal=True)
                         if (date_filter=='Prior than'):
-                            transfer_date_prior=st.date_input("Service Transfer Date :red[prior] than:",df['DateClientTurnedNPL'].max(),
+                            transfer_date_prior=st.date_input("Date Client Turned NPL :red[prior] than:",df['DateClientTurnedNPL'].max(),
                                                               min_value=df['DateClientTurnedNPL'].dropna().min(), 
                                                               max_value=df['DateClientTurnedNPL'].dropna().max())
                             transfer_date_later=df['DateClientTurnedNPL'].min()
                         elif (date_filter=='Later than'):
-                            transfer_date_later=st.date_input("Service Transfer Date :red[later] than:",df['DateClientTurnedNPL'].min(),
+                            transfer_date_later=st.date_input("Date Client Turned NPL :red[later] than:",df['DateClientTurnedNPL'].min(),
                                                               min_value=df['DateClientTurnedNPL'].dropna().min(), 
                                                               max_value=df['DateClientTurnedNPL'].dropna().max())
                             transfer_date_prior=df['DateClientTurnedNPL'].max()
                             
                         elif (date_filter=='Between dates'):
-                            transfer_date_prior=st.date_input("Service Transfer Date :red[prior] than:",df['DateClientTurnedNPL'].max(),
+                            transfer_date_prior=st.date_input("Date Client Turned NPL :red[prior] than:",df['DateClientTurnedNPL'].max(),
                                                               min_value=df['DateClientTurnedNPL'].dropna().min(), 
                                                               max_value=df['DateClientTurnedNPL'].dropna().max())
-                            transfer_date_later=st.date_input("Service Transfer Date :red[later] than:",df['DateClientTurnedNPL'].min(),
+                            transfer_date_later=st.date_input("Date Client Turned NPL :red[later] than:",df['DateClientTurnedNPL'].min(),
                                                               min_value=df['DateClientTurnedNPL'].dropna().min(), 
                                                               max_value=df['DateClientTurnedNPL'].dropna().max())
             
