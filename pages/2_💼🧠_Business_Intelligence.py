@@ -53,7 +53,7 @@ tab1,tab2 = st.tabs([" 📊 Data Analytics ", "📚 References - Reading Materia
 with tab1:
     st.markdown("""## <center><strong>🔎 :blue[Explore Your Data Instantly] 📊</strong></center>""", unsafe_allow_html=True)
 
-    col1,col2,col3=st.columns(3)
+    col1,col2,col3=st.columns([1,3,1])
     with col2:
         with st.form("File Upload form:"):
             uploaded_file=st.file_uploader("Upload Excel/CSV file:")
