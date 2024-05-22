@@ -1021,8 +1021,7 @@ if introduction:
         st.info(disclaimer)
         st.markdown("""## <center><strong>:pushpin: :blue[Introduction] </strong></center>""", unsafe_allow_html=True)
     intro="📢 The :green[**Non-Performing Loans Analysis**] application is a comprehensive tool engineered to deliver insightful analytics on non-performing loan portfolios within the banking sector. This application, developed using Streamlit, features an intuitive interface that enables banking professionals to effectively explore and comprehend data concerning non-performing loans. By leveraging this tool, professionals can make well-informed decisions and implement proactive strategies to mitigate risk."
-    intro2="This Streamlit data app is designed to intuitively present complex data through various graphs and functionalities. It allows users to input data directly from an Excel file specified in the Appendix section of the app. The application processes this data to generate interactive and insightful visualizations, enabling users to analyze and interpret their data dynamically."
-    
+    intro2="Leverage the power of visualization with our Streamlit app, designed to elevate your data analysis from static Excel sheets to a dynamic web-based platform. This app transforms raw data into a polished end-product, summarizing, analyzing, and providing actionable insights through intuitive visual interfaces. Experience a seamless transition to more effective data handling and decision-making with our comprehensive analytics solution."
     
     with intro1:
         st.write("")
