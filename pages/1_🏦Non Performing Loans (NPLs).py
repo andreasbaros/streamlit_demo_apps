@@ -2673,21 +2673,21 @@ if main_page:
                             st.warning("Click Refresh-Submit selected filters before downloading data")
 
 
-#st.sidebar.divider()
-#st.sidebar.markdown("Connect with me:")
+st.sidebar.divider()
+st.sidebar.markdown("Connect with me:")
 
-#social_media_links = [
-#    "https://www.linkedin.com/in/andreas-baros-23b43a79/",
-#    "https://www.facebook.com/andreas.baros.9/",
-#     "https://www.instagram.com/barosandreas",
+social_media_links = [
+    "https://www.linkedin.com/in/andreas-baros-23b43a79/",
+    "https://www.facebook.com/andreas.baros.9/",
+     "https://www.instagram.com/barosandreas",
      
     
-#]
+]
 
-#colors = ["#000000", None, "SteelBlue", None]
+colors = ["#000000", None, "SteelBlue", None]
 
-#social_media_icons = SocialMediaIcons(social_media_links, colors)
-#social_media_icons.render(sidebar=True, justify_content="space-evenly")
+social_media_icons = SocialMediaIcons(social_media_links, colors)
+social_media_icons.render(sidebar=True, justify_content="space-evenly")
 #social_media_icons.render(sidebar=False, justify_content="center")
 
 
