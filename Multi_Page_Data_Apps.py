@@ -9,7 +9,7 @@ import hmac
 import streamlit as st
 
 from PIL import Image
-
+from st_social_media_links import SocialMediaIcons
 
 # def check_password():
 #     """Returns True if the user had the correct password."""
@@ -104,7 +104,25 @@ Perfect for anyone looking to quickly visualize and understand data patterns wit
 # st.info(text)
 # st.success(text)
 # st.warning(text)
-# st.error(text)            
+# st.error(text)     
+
+
+st.sidebar.divider()
+st.sidebar.markdown("Connect with me:")
+
+social_media_links = [
+    "https://www.linkedin.com/in/andreas-baros-23b43a79/",
+    "https://www.facebook.com/andreas.baros.9/",
+     "https://www.instagram.com/barosandreas",
+     
+    
+]
+
+colors = ["#000000", None, "SteelBlue", None]
+
+social_media_icons = SocialMediaIcons(social_media_links, colors)
+social_media_icons.render(sidebar=True, justify_content="space-evenly")
+social_media_icons.render(sidebar=False, justify_content="center")
 
 
 
