@@ -2687,8 +2687,8 @@ social_media_links = [
 colors = ["#000000", None, "SteelBlue", None]
 
 social_media_icons = SocialMediaIcons(social_media_links, colors)
-#social_media_icons.render(sidebar=True, justify_content="space-evenly")
-social_media_icons.render(sidebar=False, justify_content="center")
+social_media_icons.render(sidebar=True, justify_content="space-evenly")
+#social_media_icons.render(sidebar=False, justify_content="center")
 
 
 
