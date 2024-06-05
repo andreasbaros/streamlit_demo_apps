@@ -6,3 +6,4 @@ matplotlib
 seaborn
 markdown
 pygwalker
+st_social_media_links
