@@ -1003,8 +1003,8 @@ st.markdown(mystyle, unsafe_allow_html=True)
 # st.markdown("<h1 style='text-align: center; color: red;'>Some title</h1>", unsafe_allow_html=True)
 
 st.sidebar.markdown("""<strong>Navigation Menu:</strong>""", unsafe_allow_html=True)
-introduction=st.sidebar.checkbox("Introduction")
-main_page=st.sidebar.checkbox("Main Page")
+introduction=st.sidebar.checkbox("Introduction",value=True)
+main_page=st.sidebar.checkbox("Main Page",value=True)
 
 # introduction=st.sidebar.checkbox("Introduction", key='intro')
 # main_page=st.sidebar.checkbox("Main Page", key='main')
