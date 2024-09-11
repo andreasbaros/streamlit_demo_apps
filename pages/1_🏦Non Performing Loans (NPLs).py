@@ -1161,7 +1161,7 @@ if main_page:
         # st.write("")
         st.write('\n')
         st.write('\n')
-        with st.expander("Key Metrics:"):
+        with st.expander("Key Metrics:",expanded=True):
             KPI_2=key_metrics()
         st.markdown("""## <center><strong>:pushpin: :blue[Main Page] </strong></center>""", unsafe_allow_html=True)
         #st.write('\n')
