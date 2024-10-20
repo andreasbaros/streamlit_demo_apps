@@ -1043,7 +1043,7 @@ if main_page:
     
     st.subheader("🗃️ Page Sections")
     # 🗂️📁📑
-    tab2, tab1,tab3,tabref,appendix = st.tabs([" 📊 Data Analytics ", " 🔎 Data Extraction ", " Data Dictionary ","📚 References - Reading Material","📑 APPENDIX"])
+    tab2,tab_reports, tab1,tab3,tabref,appendix = st.tabs([" 📊 Data Analytics ","📑 Reports Generator", " 🔎 Data Extraction ", " Data Dictionary ","📚 References - Reading Material","🧮 APPENDIX"])
     # Data Emojis | 📊 📈 🖥️ 🧮 💻 📑 🗄️ 📊 📈 🖥️ 🧮 💻 📑 🗄️ | Copy & Paste
 
     
@@ -2040,7 +2040,8 @@ if main_page:
                 
                     
                     #select_hist=st.selectbox() and st.radio() widgets configuration
-                    
+    with tab_reports:
+        multiple_dfs(dfs,'Summary tables','NPL report_',1)
     with tab1:
         form_check=False
     
