@@ -541,9 +541,9 @@ def multiple_dfs(df_list, sheets, report_name, spaces):
 # worksheet.set_row(12, 18, currency_format)
     writer.close()
     workbook.close()
-    col1r, col2r, col3r = st.columns([1.4,1,1])
-    with col2r:
-        st.download_button('Download Summary Report to excel', data=buffer_report,
+    #col1r, col2r, col3r = st.columns([1.4,1,1])
+    #with col2r:
+    st.download_button('Download Summary Report to excel', data=buffer_report,
                            file_name=report_name2, mime='application/vnd.ms-excel',
                            type="primary", key="summary report")
 
