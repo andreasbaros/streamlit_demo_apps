@@ -1328,7 +1328,7 @@ if main_page:
             top_10_download_v2.reset_index().style.applymap(lambda _: 'background-color: LightSkyBlue;', subset=([len(top_10_download_v)-1], slice(None)))]
             
         # Report download functionality for summary report
-        multiple_dfs(dfs,'Summary tables','Summary report_',1)
+        #multiple_dfs(dfs,'Summary tables','Summary report_',1)
         
     
         
