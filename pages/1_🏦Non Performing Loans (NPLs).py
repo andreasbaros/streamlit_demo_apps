@@ -83,7 +83,7 @@ def check_password():
     col1,col2,col3=st.columns([1,2,1])
 
     with col2:
-        st.image(image,use_column_width='auto')
+        st.image(image,use_container_width ='auto')
         hide_image_fs='''
                       <style>
                       button[title="View fullscreen"]{
@@ -957,7 +957,7 @@ image = Image.open('./repositary/Bank_Logo.png')
 col1,col2,col3=st.columns([1,2,1])
 
 with col2:
-    st.image(image,use_column_width='auto')
+    st.image(image,use_container_width ='auto')
     hide_image_fs='''
                   <style>
                   button[title="View fullscreen"]{
@@ -1609,7 +1609,7 @@ if main_page:
                             writer.close()
                             st.download_button('💾 Download table to excel', data=buffer, file_name=file_export_name, mime='application/vnd.ms-excel', key="table_dpd_bucket1")
                 
-                     #use_column_width='auto'
+                     #use_container_width ='auto'
             
                     
             #colbl2,col2a,colbl,col2b,colbl3=st.columns([0.5,10,1.4,10,0.5])
@@ -2406,6 +2406,7 @@ social_media_icons.render(sidebar=True, justify_content="space-evenly")
             
         #     filtered_df=filter_dataframe(df)
                                         
+
 
 
 
