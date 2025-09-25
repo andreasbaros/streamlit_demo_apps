@@ -112,7 +112,7 @@ def check_password():
         #st.success("🔓 Password correct")
     #    st.error("🔒 Password incorrect. Try again.")
     #return False
-    if st.session_state.get("password_correct") is False:
+    .if st.session_state.get("password_correct") is False:
         st.error("🔒 Password incorrect. Try again.")
     return False
             
@@ -2406,4 +2406,5 @@ social_media_icons.render(sidebar=True, justify_content="space-evenly")
             
         #     filtered_df=filter_dataframe(df)
                                         
+
 
