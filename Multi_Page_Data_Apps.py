@@ -28,7 +28,7 @@ from st_social_media_links import SocialMediaIcons
 
 #     # Show input for password.
 #     image = Image.open('data_app_logo.png')
-#     st.image(image, use_column_width='auto')
+#     st.image(image, use_container_width='auto')
     
 #     st.write("")
 #     st.write("")
@@ -61,7 +61,7 @@ image = Image.open('./repositary/data_app_logo.png')
 col1, col2, col3 = st.columns([1, 2, 1])
 
 with col2:
-    st.image(image, use_column_width='auto')
+    st.image(image, use_container_width='auto')
     hide_image_fs='''
                   <style>
                   button[title="View fullscreen"]{
@@ -123,6 +123,7 @@ colors = ["#000000", None, "SteelBlue", None]
 social_media_icons = SocialMediaIcons(social_media_links, colors)
 social_media_icons.render(sidebar=True, justify_content="space-evenly")
 social_media_icons.render(sidebar=False, justify_content="center")
+
 
 
 
