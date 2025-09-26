@@ -80,7 +80,7 @@ def check_password():
     # Show input for password.
     #image = Image.open('data_app_logo.png')
     image = Image.open('./repositary/Bank_Logo.png')
-    col1,col2,col3=st.columns([1,2,1])
+    col1,col2,col3=st.columns(3)
 
     with col2:
         st.image(image,use_container_width ='auto')
@@ -94,7 +94,7 @@ def check_password():
     
     st.write("")
     st.write("")
-    col1,col2,col3=st.columns([1,20,1])
+    col1,col2,col3=st.columns(3)
     with col2:
         st.markdown("""## <center><strong>:bank: :grey[**Non-Performing Loans Analysis**] :bank:</strong></center>""", unsafe_allow_html=True)
         #st.markdown("""## <center><strong>:blue[Non-Performing Loans Analysis]</strong></center>""", unsafe_allow_html=True)
@@ -2406,6 +2406,7 @@ social_media_icons.render(sidebar=True, justify_content="space-evenly")
             
         #     filtered_df=filter_dataframe(df)
                                         
+
 
 
 
